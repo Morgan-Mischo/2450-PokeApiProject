@@ -1,10 +1,12 @@
-﻿@using Web.Shared.Models
+@using Web.Shared.Models
 
 
 <div class="card" style="margin: 5px 0 5px 0;">
+    <div class="card__face card__face--front">
+        <img src=@Pokemon.FrontImageUri style="height: 500px; width: 500px;" />
+    </div>
     <div class="card-body text-center">
-        <h5 class="card-title">
-            <img src=@Pokemon.FrontImageUri style="height: 50px; width: 50px;" />
+        <h5 class="card-title">  
             @PascalCaseName(Pokemon.Name)
             @foreach (var type in Pokemon.Types)
             {
@@ -36,6 +38,7 @@
         </p>
     </div>
 </div>
+
 
 @code {
 
